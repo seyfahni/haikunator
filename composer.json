@@ -1,0 +1,28 @@
+{
+  "name": "seyfahni/haikunator",
+  "type": "library",
+  "description": "Generate random words or phrases usable as IDs.",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "seyfahni\\Haikunator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "seyfahni\\Haikunator\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Niklas Seyfarth",
+      "email": "niklas@seyfarth.de"
+    }
+  ],
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
+}
