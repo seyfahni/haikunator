@@ -8,7 +8,6 @@ namespace seyfahni\Haikunator;
  */
 final class Haikunators
 {
-
     /**
      * List of adjectives used by {@link https://github.com/Atrox/haikunatorphp Atrox/haikunatorphp}.
      *
