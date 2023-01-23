@@ -37,6 +37,24 @@ $jitsiHaikunator = Haikunators::jitsiHaikunator();
 There are multiple implementation of the `Haikunator` interface provided.
 Usually you want to put a combination of `WordListHaikunator`s and `CharactersHaikunator` into one `AppendingHaikunator`.
 
+```php
+use seyfahni\Haikunator\AppendingHaikunator;
+use seyfahni\Haikunator\CharactersHaikunator;
+use seyfahni\Haikunator\ConstantHaikunator;
+use seyfahni\Haikunator\MtRandIntegerGenerator;
+use seyfahni\Haikunator\WordListHaikunator;
+
+$numberGenerator = new MtRandIntegerGenerator();
+
+# Generate IDs like my-useful-aHt
+$haikunator = new AppendingHaikunator([
+    new ConstantHaikunator('my'),
+    new WordListHaikunator($numberGenerator, ['fancy', 'useful', 'modular']),
+    new CharactersHaikunator($numberGenerator, 'Haikunator', 3),
+    ], '-'
+);
+```
+
 The `IntegerGenerator` interface is used by some `Haikunator` implementations so that
 any kind of number generation can be used via adapter implementation. 
 
